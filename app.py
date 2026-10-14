@@ -105,7 +105,7 @@ else:
             )
             st.plotly_chart(fig, use_container_width=True)
             
-            # Dự đoán ngày kế tiếp
+                    # Dự đoán ngày kế tiếp
             last_days = scaled_data[-prediction_days:]
             X_future = np.array([last_days])
             X_future = np.reshape(X_future, (X_future.shape[0], X_future.shape[1], 1))
@@ -113,4 +113,3 @@ else:
             future_pred = model.predict(X_future)
             future_pred = scaler.inverse_transform(future_pred)
             st.success(f"🔮 Giá đóng cửa dự đoán cho ngày giao dịch tiếp theo: **{future_pred[0][0]:,.2f}**")
-                Dropout(0.2),
