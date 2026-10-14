@@ -63,7 +63,8 @@ else:
             model = Sequential([
                 LSTM(units=50, return_sequences=True, input_shape=(X_train.shape[1], 1)),
                 Dropout(0.2),
-                LSTM(units=50, return_sequences=False),Dense(units=25),
+                LSTM(units=50, return_sequences=False),
+                Dense(units=25),
                 Dense(units=1)
             ])
 
